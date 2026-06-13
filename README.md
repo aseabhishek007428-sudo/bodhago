@@ -4,7 +4,7 @@ Online bookstore for academic, competitive exam, literature, and spiritual books
 
 ## Website
 
-https://bodha.in
+https://bodhago.in
 
 ## Features
 
