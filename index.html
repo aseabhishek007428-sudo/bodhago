@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bodha.in - Online Book Store</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+header{
+    background:#1e3a5f;
+    color:white;
+    padding:15px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+.hero{
+    background:linear-gradient(rgba(0,0,0,.6),
+    rgba(0,0,0,.6)),
+    url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1200');
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:120px 20px;
+}
+
+.hero h1{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+.btn{
+    background:#d4a017;
+    color:white;
+    padding:12px 25px;
+    border:none;
+    border-radius:5px;
+    text-decoration:none;
+}
+
+section{
+    padding:60px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    color:#1e3a5f;
+}
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.category{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.books{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.book{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.book img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.book-content{
+    padding:15px;
+}
+
+.price{
+    color:#1e3a5f;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.book button{
+    width:100%;
+    padding:10px;
+    background:#1e3a5f;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+.about{
+    background:white;
+}
+
+.contact{
+    background:#eef2f7;
+}
+
+.contact-form{
+    max-width:600px;
+    margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+}
+
+.contact-form button{
+    background:#1e3a5f;
+    color:white;
+    border:none;
+    padding:12px 25px;
+}
+
+footer{
+    background:#1e3a5f;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    text-align:center;
+    line-height:60px;
+    font-size:30px;
+    text-decoration:none;
+}
+
+@media(max-width:768px){
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Bodha.in</div>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>Knowledge Delivered To Your Doorstep</h1>
+    <p>Explore thousands of books for learning, growth and inspiration.</p>
+    <a href="#books" class="btn">Shop Now</a>
+</section>
+
+<section id="categories">
+    <h2 class="section-title">Book Categories</h2>
+
+    <div class="categories">
+        <div class="category">
+            <h3>Competitive Exams</h3>
+            <p>UPSC, SSC, Banking, Railway</p>
+        </div>
+
+        <div class="category">
+            <h3>Academic Books</h3>
+            <p>School & College Books</p>
+        </div>
+
+        <div class="category">
+            <h3>Literature</h3>
+            <p>Fiction & Non-Fiction</p>
+        </div>
+
+        <div class="category">
+            <h3>Spiritual Books</h3>
+            <p>Gita, Ramayana, Yoga</p>
+        </div>
+    </div>
+</section>
+
+<section id="books">
+    <h2 class="section-title">Best Sellers</h2>
+
+    <div class="books">
+
+        <div class="book">
+            <img src="https://covers.openlibrary.org/b/id/10523338-L.jpg">
+            <div class="book-content">
+                <h3>Atomic Habits</h3>
+                <p>James Clear</p>
+                <div class="price">₹499</div>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="book">
+            <img src="https://covers.openlibrary.org/b/id/8231996-L.jpg">
+            <div class="book-content">
+                <h3>Rich Dad Poor Dad</h3>
+                <p>Robert Kiyosaki</p>
+                <div class="price">₹399</div>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="book">
+            <img src="https://covers.openlibrary.org/b/id/5546156-L.jpg">
+            <div class="book-content">
+                <h3>Bhagavad Gita</h3>
+                <p>Gita Press</p>
+                <div class="price">₹199</div>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="book">
+            <img src="https://covers.openlibrary.org/b/id/7222246-L.jpg">
+            <div class="book-content">
+                <h3>India Year Book</h3>
+                <p>Government Publication</p>
+                <div class="price">₹650</div>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2 class="section-title">About Bodha.in</h2>
+
+    <p style="text-align:center; max-width:800px; margin:auto;">
+        Bodha.in is an online bookstore committed to making quality books
+        accessible across India. From competitive exams to literature,
+        spirituality and academic resources, we help readers discover
+        books that inspire learning and growth.
+    </p>
+</section>
+
+<section class="contact" id="contact">
+    <h2 class="section-title">Contact Us</h2>
+
+    <form class="contact-form">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Email Address">
+        <input type="tel" placeholder="Mobile Number">
+        <textarea rows="5" placeholder="Message"></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Bodha.in | Read More • Learn More • Grow More</p>
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/919999999999"
+target="_blank">☎</a>
+
+<script>
+document.querySelector(".contact-form")
+.addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Thank you for contacting Bodha.in!");
+});
+</script>
+
+</body>
+</html>
