@@ -1,4 +1,4 @@
-# Bodha.in
+# BodhaGo
 
 Online bookstore for academic, competitive exam, literature, and spiritual books.
 
