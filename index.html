@@ -1,43 +1,264 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bodhago - Knowledge Delivered Instantly</title>
 
-<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Bodhago - Instant Book Delivery</title>
+<style>
 
-<style> body{ margin:0; font-family:Arial, sans-serif; background:#f8f9fa; } header{ background:#1f2937; color:white; padding:15px 40px; display:flex; justify-content:space-between; align-items:center; } .logo{ font-size:28px; font-weight:bold; } nav a{ color:white; text-decoration:none; margin-left:20px; } .hero{ text-align:center; padding:100px 20px; } .hero h1{ font-size:52px; margin-bottom:15px; } .hero p{ font-size:22px; color:#555; } .search-box{ margin-top:30px; } .search-box input{ width:350px; max-width:80%; padding:12px; border:1px solid #ccc; border-radius:5px; } .search-box button{ padding:12px 20px; border:none; background:#2563eb; color:white; border-radius:5px; cursor:pointer; } .coming-soon{ margin-top:40px; color:#dc2626; font-size:24px; font-weight:bold; } footer{ text-align:center; padding:30px; background:#111827; color:white; margin-top:80px; } </style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    min-height: 100vh;
+    background: linear-gradient(
+        -45deg,
+        #0f172a,
+        #1e40af,
+        #2563eb,
+        #f97316
+    );
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.logo img {
+    height: 60px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.search-box {
+    margin-top: 30px;
+}
+
+.search-box input {
+    width: 350px;
+    max-width: 80%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.search-box button {
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #f97316;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-box button:hover {
+    transform: scale(1.05);
+}
+
+.coming-soon {
+    margin-top: 30px;
+    padding: 15px 25px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 25px;
+    padding: 60px 8%;
+}
+
+.feature {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.feature h3 {
+    margin-bottom: 10px;
+}
+
+.contact {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.contact h2 {
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: rgba(0,0,0,0.25);
+}
+
+.floating-book {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    font-size: 50px;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@media(max-width:768px) {
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-<header> <div class="logo">📚 Bodhago</div>
+<div class="floating-book">📚</div>
 
-<nav>
-    <a href="#">Home</a>
-    <a href="#">Books</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-</nav>
+<header>
+
+    <div class="logo">
+        <img src="logo.png" alt="Bodhago Logo">
+    </div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
 
 </header>
 
 <section class="hero">
 
-<h1>Instant Book Delivery</h1>
+    <h1>Bodhago</h1>
 
-<p>
-    Discover, order and receive books quickly.
-</p>
+    <p>
+        Knowledge Delivered Instantly.
+        Search, order and receive books from nearby bookstores.
+    </p>
 
-<div class="search-box">
-    <input type="text" placeholder="Search for books...">
-    <button>Search</button>
-</div>
+    <div class="search-box">
+        <input type="text" placeholder="Search for books...">
+        <button>Search</button>
+    </div>
 
-<div class="coming-soon">
-    🚀 Coming Soon
-</div>
+    <div class="coming-soon">
+        🚀 Launching Soon
+    </div>
 
 </section>
 
-<footer> Contact: hello@bodhago.in <br><br> © 2026 Bodhago </footer>
+<section class="features">
 
-</body> </html>
+    <div class="feature">
+        <h3>⚡ Fast Delivery</h3>
+        <p>Books delivered quickly from nearby bookstores.</p>
+    </div>
+
+    <div class="feature">
+        <h3>📖 Huge Collection</h3>
+        <p>Academic, novels, competitive exams and more.</p>
+    </div>
+
+    <div class="feature">
+        <h3>🏪 Local Stores</h3>
+        <p>Support local bookstores while shopping online.</p>
+    </div>
+
+    <div class="feature">
+        <h3>🔍 Easy Search</h3>
+        <p>Find books instantly with smart search.</p>
+    </div>
+
+</section>
+
+<section class="contact">
+
+    <h2>Get Early Access</h2>
+
+    <p>Email: hello@bodhago.in</p>
+
+    <br>
+
+    <p>
+        Join us as we build India's fastest book delivery platform.
+    </p>
+
+</section>
+
+<footer>
+    © 2026 Bodhago | Instant Book Delivery
+</footer>
+
+</body>
+</html>
